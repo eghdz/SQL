@@ -1,0 +1,21 @@
+//Create a coffee store database//
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, bay INTEGER, price INTEGER);
+
+INSERT INTO inventory VALUES (1, "Mugs", 15, 2, 6.99);
+INSERT INTO inventory VALUES (2, "Coffee filters", 10, 4, 2.99);
+INSERT INTO inventory VALUES (3, "Frothers", 5, 6, 10.99);
+INSERT INTO inventory VALUES (4, "Coffee maker", 11, 8, 26.99);
+INSERT INTO inventory VALUES (5, "Coffee grinder", 6, 10, 20.99);
+INSERT INTO inventory VALUES (6, "Coasters", 7, 2, 1.99);
+INSERT INTO inventory VALUES (7, "Decaf coffee", 15, 10, 8.99);
+INSERT INTO inventory VALUES (8, "French Roast coffee", 12, 10, 9.99);
+INSERT INTO inventory VALUES (9, "House Special coffee", 10, 10, 9.99);
+INSERT INTO inventory VALUES (10, "Dark Roast coffee", 12, 10, 8.99);
+
+//Display the database ordered by price//
+SELECT name, SUM(price) FROM inventory GROUP BY price DESC;
+
+//Display the database ordered by quantity//
+SELECT name, SUM(quantity) FROM inventory GROUP BY quantity DESC;
+
