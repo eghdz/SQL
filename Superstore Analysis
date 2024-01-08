@@ -1,4 +1,4 @@
-//In this queries
+//In this queries, I'm using a Superstore database to quanitfy statistics about order data.//
 
 #1. Write a query where the items are ordered by ascending price.
 SELECT *
