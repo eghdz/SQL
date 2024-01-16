@@ -78,4 +78,15 @@ GROUP BY industry
 HAVING avg_revenue_billions>=170
 ;
 
-//
+//Which companies have healthcare benefits *and* at least 12 maternity leave weeks?
+SELECT company_name
+FROM fortune_companies
+WHERE maternity_leave_weeks>12
+AND healthcare_benefits=1
+;
+
+//Which company in the Technology industry has the least revenue, and what's their revenue? 
+SELECT company_name, min(revenue)
+FROM fortune_companies
+WHERE industry = 'Technology'
+;
