@@ -71,4 +71,11 @@ END as pto_allowance
 FROM fortune_companies
 ;
 
+//Which industries have an average revenue of at least $170 Billion, and what are their average revenues?
+SELECT industry, ROUND(AVG(revenue),1) as avg_revenue_billions
+FROM fortune_companies
+GROUP BY industry
+HAVING avg_revenue_billions>=170
+;
+
 //
